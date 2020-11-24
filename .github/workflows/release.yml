@@ -18,7 +18,8 @@ jobs:
                   node-version: 12.x
                   registry-url: https://registry.npmjs.org
             - name: publish
+              run: npm install
               run: npm publish --access public
-              working-directory: npmtest
+              working-directory: node-op-client
               env:
                   NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
