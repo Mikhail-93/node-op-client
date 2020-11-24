@@ -1,4 +1,4 @@
-name: "npm public"
+name: "npm publish"
 
 on:
     push:
@@ -18,7 +18,6 @@ jobs:
                   node-version: 12.x
                   registry-url: https://registry.npmjs.org
             - name: publish
-              run: npm install
               run: npm publish --access public
               working-directory: node-op-client
               env:
